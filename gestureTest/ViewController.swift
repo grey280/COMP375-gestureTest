@@ -10,12 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
     
-//    @IBOutlet weak var gestureView: GestureView!{
-//        didSet{
-//            
-//        }
-//    }
-
+    
+    @IBOutlet var gestureView: GestureView!{
+        didSet{
+            let tapHandler = #selector(drawView.tapHandler(tapGestureRecognizer:))
+            let tapGestureRecognizer = UITapGestureRecognizer(target: gestureView, action: tapHandler)
+            gestureView.addGestureRecognizer(tapGestureRecognizer)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
