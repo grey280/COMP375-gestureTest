@@ -8,6 +8,6 @@
 
 import UIKit
 
-class GestureView: UITapGestureRecognizer{
+class GestureView: UIView{
     
 }
