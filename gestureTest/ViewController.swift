@@ -9,6 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+//    @IBOutlet weak var gestureView: GestureView!{
+//        didSet{
+//            
+//        }
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
