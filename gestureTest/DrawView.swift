@@ -30,13 +30,24 @@ import UIKit
     }
     
     // One-finger continuous gestures
-    func longPressHandler(_ longPressRecognizer: UILongPressGestureRecognizer){
-        if longPressRecognizer.state == .ended{
+    func longPressHandler(_ longPressRecognizer: UILongPressGestureRecognizer){ // long press resets it
+        switch longPressRecognizer.state{
+        case .ended, .changed:
             scale = 100
+            self.transform = CGAffineTransform.identity
+        default:
+            break;
         }
     }
     func panHandler(_ panRecognizer: UIPanGestureRecognizer){ // heh
-        print("pan") // eventually we may do something here
+        switch panRecognizer.state{
+        case .changed, .ended:
+            let transformation = panRecognizer.translation(in: self)
+            self.transform = self.transform.translatedBy(x: transformation.x, y: transformation.y)
+            self.transform = CGAffineTransform.identity
+        default:
+            break;
+        }
     }
     func swipeHandler(_ swipeRecognizer: UISwipeGestureRecognizer){
         print("swipe")
