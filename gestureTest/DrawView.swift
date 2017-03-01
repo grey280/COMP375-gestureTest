@@ -17,6 +17,8 @@ import UIKit
     }
     
     var small = true
+    
+    // One-finger gestures
     func tapHandler(_ tapRecognizer: UITapGestureRecognizer){
         print("tapHandler()")
         if(small){
@@ -27,6 +29,15 @@ import UIKit
         small = !small
     }
     
+    // One-finger continuous gestures
+    func longPressHandler(_ longPressRecognizer: UILongPressGestureRecognizer){
+        if longPressRecognizer.state == .ended{
+            scale = 100
+        }
+    }
+    func panHandler(_ panRecognizer: UIPanGestureRecognizer){ // heh
+        print("pan") // eventually we may do something here
+    }
     func swipeHandler(_ swipeRecognizer: UISwipeGestureRecognizer){
         print("swipe")
         if swipeRecognizer.state == .ended{
@@ -41,12 +52,7 @@ import UIKit
         }
     }
     
-    func longPressHandler(_ longPressRecognizer: UILongPressGestureRecognizer){
-        if longPressRecognizer.state == .ended{
-            scale = 100
-        }
-    }
-    
+    // Two-finger continuous gestures
     func pinchHandler(_ pinchRecognizer: UIPinchGestureRecognizer){
         if pinchRecognizer.state == .changed{
             scale *= pinchRecognizer.scale
@@ -55,11 +61,7 @@ import UIKit
     }
     
     func rotationHandler(_ rotationRecognizer: UIRotationGestureRecognizer){
-        
-    }
-    
-    func panHandler(_ panRecognizer: UIPanGestureRecognizer){ // heh
-        
+        print("rotation") // eventually we may actually rotate things
     }
     
     override func draw(_ rect: CGRect){
