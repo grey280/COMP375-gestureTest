@@ -41,6 +41,12 @@ import UIKit
         }
     }
     
+    func longPressHandler(_ longPressRecognizer: UILongPressGestureRecognizer){
+        if longPressRecognizer.state == .ended{
+            print("Long press")
+        }
+    }
+    
     override func draw(_ rect: CGRect){
         let center = CGPoint(x: bounds.midX, y:bounds.midY)
         

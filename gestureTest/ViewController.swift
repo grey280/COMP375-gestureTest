@@ -12,14 +12,17 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var dView: drawView!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(dView.tapHandler))
+        
+        let tapRecognizer = UITapGestureRecognizer(target: dView, action: #selector(dView.tapHandler(_:)))
         dView.addGestureRecognizer(tapRecognizer)
         print("Added gesture recognizer")
+        
+        let longPressRecognizer = UILongPressGestureRecognizer(target: dView, action: #selector(dView.longPressHandler(_:)))
+        dView.addGestureRecognizer(longPressRecognizer)
+        print("Added long press recognizer")
     }
 
     override func didReceiveMemoryWarning() {
