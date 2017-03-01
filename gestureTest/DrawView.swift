@@ -48,8 +48,9 @@ import UIKit
     }
     
     func pinchHandler(_ pinchRecognizer: UIPinchGestureRecognizer){
-        if pinchRecognizer.state == .ended{
-            scale = 100 * pinchRecognizer.scale
+        if pinchRecognizer.state == .changed{
+            scale *= pinchRecognizer.scale
+            pinchRecognizer.scale = 1
         }
     }
     
