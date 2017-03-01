@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var dView: drawView!
+    @IBOutlet weak var dView: DrawView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

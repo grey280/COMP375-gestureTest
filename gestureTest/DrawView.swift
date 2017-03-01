@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class drawView: UIView{
+@IBDesignable class DrawView: UIView{
     
     @IBInspectable var scale: CGFloat = 100.0 {
         didSet{
