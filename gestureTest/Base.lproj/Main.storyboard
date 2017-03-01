@@ -35,9 +35,11 @@
                             <constraint firstItem="d2K-ZM-XTC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="daG-Ox-bkg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dView" destination="d2K-ZM-XTC" id="ciL-Kr-ucP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="vMh-IJ-JyO"/>
             </objects>
             <point key="canvasLocation" x="140" y="137.18140929535232"/>
         </scene>

@@ -17,13 +17,28 @@ import UIKit
     }
     
     var small = true
-    func tapHandler(tapGestureRecognizer: UITapGestureRecognizer){
+    func tapHandler(_ tapRecognizer: UITapGestureRecognizer){
+        print("tapHandler()")
         if(small){
             scale *= 2
         }else{
             scale *= 0.5
         }
         small = !small
+    }
+    
+    func swipeHandler(_ swipeRecognizer: UISwipeGestureRecognizer){
+        print("swipe")
+        if swipeRecognizer.state == .ended{
+            switch swipeRecognizer.direction {
+            case UISwipeGestureRecognizerDirection.up, UISwipeGestureRecognizerDirection.right:
+                print("swiped up or right")
+                scale *= 1.2
+            default:
+                print("swiped down or left")
+                scale *= 1/1.2
+            }
+        }
     }
     
     override func draw(_ rect: CGRect){
