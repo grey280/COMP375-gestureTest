@@ -43,7 +43,13 @@ import UIKit
     
     func longPressHandler(_ longPressRecognizer: UILongPressGestureRecognizer){
         if longPressRecognizer.state == .ended{
-            print("Long press")
+            scale = 100
+        }
+    }
+    
+    func pinchHandler(_ pinchRecognizer: UIPinchGestureRecognizer){
+        if pinchRecognizer.state == .ended{
+            scale = 100 * pinchRecognizer.scale
         }
     }
     

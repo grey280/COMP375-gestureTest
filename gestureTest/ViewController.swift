@@ -23,6 +23,10 @@ class ViewController: UIViewController {
         let longPressRecognizer = UILongPressGestureRecognizer(target: dView, action: #selector(dView.longPressHandler(_:)))
         dView.addGestureRecognizer(longPressRecognizer)
         print("Added long press recognizer")
+        
+        let pinchRecognizer = UIPinchGestureRecognizer(target: dView, action: #selector(dView.pinchHandler(_:)))
+        dView.addGestureRecognizer(pinchRecognizer)
+        print("Added pinch recognizer")
     }
 
     override func didReceiveMemoryWarning() {
