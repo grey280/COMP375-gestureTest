@@ -54,6 +54,14 @@ import UIKit
         }
     }
     
+    func rotationHandler(_ rotationRecognizer: UIRotationGestureRecognizer){
+        
+    }
+    
+    func panHandler(_ panRecognizer: UIPanGestureRecognizer){ // heh
+        
+    }
+    
     override func draw(_ rect: CGRect){
         let center = CGPoint(x: bounds.midX, y:bounds.midY)
         

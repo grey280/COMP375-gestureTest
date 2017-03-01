@@ -18,15 +18,18 @@ class ViewController: UIViewController {
         
         let tapRecognizer = UITapGestureRecognizer(target: dView, action: #selector(dView.tapHandler(_:)))
         dView.addGestureRecognizer(tapRecognizer)
-        print("Added gesture recognizer")
         
         let longPressRecognizer = UILongPressGestureRecognizer(target: dView, action: #selector(dView.longPressHandler(_:)))
         dView.addGestureRecognizer(longPressRecognizer)
-        print("Added long press recognizer")
         
         let pinchRecognizer = UIPinchGestureRecognizer(target: dView, action: #selector(dView.pinchHandler(_:)))
         dView.addGestureRecognizer(pinchRecognizer)
-        print("Added pinch recognizer")
+        
+        let panRecognizer = UIPanGestureRecognizer(target: dView, action: #selector(dView.panHandler(_:)))
+        dView.addGestureRecognizer(panRecognizer)
+        
+        let rotateRecognizer = UIRotationGestureRecognizer(target: dView, action: #selector(dView.rotationHandler(_:)))
+        dView.addGestureRecognizer(rotateRecognizer)
     }
 
     override func didReceiveMemoryWarning() {
