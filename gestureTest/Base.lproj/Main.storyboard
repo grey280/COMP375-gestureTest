@@ -25,6 +25,12 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="639"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Q8L-ZS-Dd4" appends="YES" id="OWB-4L-a33"/>
+                                    <outletCollection property="gestureRecognizers" destination="vTE-RR-i1Y" appends="YES" id="9Uq-Z2-Dix"/>
+                                    <outletCollection property="gestureRecognizers" destination="3At-jg-x0g" appends="YES" id="IqQ-KU-Ggy"/>
+                                    <outletCollection property="gestureRecognizers" destination="rPo-w7-IvR" appends="YES" id="Jm5-rb-kty"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -40,6 +46,26 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="Q8L-ZS-Dd4">
+                    <connections>
+                        <action selector="swipeGesture:" destination="BYZ-38-t0r" id="jC8-r5-p73"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="vTE-RR-i1Y">
+                    <connections>
+                        <action selector="swipeGesture:" destination="BYZ-38-t0r" id="IHG-3j-Sxi"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="3At-jg-x0g">
+                    <connections>
+                        <action selector="swipeGesture:" destination="BYZ-38-t0r" id="l5T-SC-Gud"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="rPo-w7-IvR">
+                    <connections>
+                        <action selector="swipeGesture:" destination="BYZ-38-t0r" id="eTP-ZI-mPl"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="140" y="137.18140929535232"/>
         </scene>

@@ -12,6 +12,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var dView: DrawView!
     
+    @IBAction func swipeGesture(_ sender: UISwipeGestureRecognizer) {
+        print("swipeGesture")
+        dView.swipeHandler(sender)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
